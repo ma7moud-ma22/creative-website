@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: system-ui;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transition: 1s;
+}
+ul {
+  display: flex;
+}
+ul li {
+  list-style: none;
+  margin: auto 20px;
+  font-size: 18px;
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+ul li a:hover {
+  background-color: #481358;
+}
+
+header h2 a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: normal;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.images {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(180deg, #270a23, #341358);
+}
+.images img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#moon {
+  mix-blend-mode: screen;
+}
+#good_morning {
+  position: absolute;
+  left: 50%;
+  top: 21%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  text-transform: capitalize;
+}
+.images::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  bottom: 0;
+  background-image: linear-gradient(to top, #300e2c, rgba(255, 255, 255, 0));
+}
+.images h4 {
+  position: absolute;
+  left: 50%;
+  bottom: 150px;
+  letter-spacing: 10px;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+  width: 160px;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  transition: .3s;
+}
+.images h4 span {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  border-style: solid;
+  border-width: 3px;
+  border-color: transparent rgb(255, 255, 255) rgb(255, 255, 255) transparent;
+  transform: rotate(45deg) translateX(-50%);
+  z-index: 600;
+  animation: scroll .4s;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0%{
+   bottom: -25px ;
+  }
+  100%{
+    bottom: -50px;
+  }
+  
+}
+.content {
+  position: relative;
+  padding: 20px;
+  background-image: linear-gradient(#300e2c, #1a0818);
+}
+.content h3 {
+  padding: 20px 0;
+  font-size: 22px;
+}
+.content p {
+  margin: 30px 0;
+  width: 70%;
+  line-height: 1.7;
+  font-size: 18px;
+  color: rgb(219, 219, 219);
+}
